@@ -16,8 +16,8 @@ pipeline {
                            }
                 stage("build-image") {
                      steps {
-                             sh 'sudo docker build -t java-repo:$BUILD_TAG .'
-                             sh 'sudo docker tag java-repo:$BUILD_TAG mathur2000/rahil-mathur05:$BUILD_TAG'
+                             sh 'docker build -t java-repo:$BUILD_TAG .'
+                             sh 'docker tag java-repo:$BUILD_TAG mathur2000/rahil-mathur05:$BUILD_TAG'
                              }
                 }
                 stage("dockerlogin") {
