@@ -32,7 +32,7 @@ pipeline {
 		stage("QAT TESTING") {
 		     steps {  
 
- 			      sh 'docker run -dt --name maventesting -p 8085:8080 mathur2000/rahil-mathur05:$BUILD_TAG'
+ 			      sh 'docker run -dt --name maventesting -p 0.0.0.0:8085:8080 mathur2000/rahil-mathur05:$BUILD_TAG'
                     }
 
 	    	}
