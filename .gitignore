@@ -1,0 +1,5 @@
+.classpath
+.project
+/.settings
+# Ignore AWS credentials and key files
+aws_ec2.yaml
