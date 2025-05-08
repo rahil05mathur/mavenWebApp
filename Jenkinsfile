@@ -38,7 +38,7 @@ pipeline {
 	    	}
                 stage("app-testing using curl") {
 		     steps {
-                              sh 'curl 13.235.64.151:8085'
+                              sh 'curl 65.2.160.227:8085'
                      
                      } 
 
