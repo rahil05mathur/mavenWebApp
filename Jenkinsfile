@@ -24,7 +24,7 @@ pipeline {
                      steps { 
 		             withCredentials([string(credentialsId: 'dokHubPassID', variable: 'dokHubPassVar')]) {
 			     sh 'docker login -u mathur2000 -p ${dokHubPassVar}'
-			     sh 'docker push mathur2000/rahil-mathur2000:$BUILD_TAG'
+			     sh 'docker push mathur2000/rahil-mathur05:$BUILD_TAG'
 			     }
 		     }
 		      
