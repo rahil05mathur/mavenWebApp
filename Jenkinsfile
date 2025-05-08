@@ -31,7 +31,7 @@ pipeline {
 		}
 		stage("QAT TESTING") {
 		     steps {  
-		              sh 'docker rm -f $(sudo docker ps -a -q)'
+		              sh 'docker rm -f $(docker ps -aq)'
  			      sh 'docker run -dt --name maventesting -p 8085:8080 mathur2000/rahil-mathur05:$BUILD_TAG'
                     }
 
