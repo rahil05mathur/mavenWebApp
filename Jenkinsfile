@@ -45,11 +45,7 @@ pipeline {
 
 		    }
              
-                }
-sh -c "mv /usr/lib/tomcat/webapps /usr/lib/tomcat/webapps10 && mv /usr/lib/tomcat/webapps.dist /usr/lib/tomcat/webapps"' 
-			       
-		    
-                
+                }                
                 stage("app-testing using curl") {
 		     steps {
                               sh 'curl http://13.202.89.145:8085'
