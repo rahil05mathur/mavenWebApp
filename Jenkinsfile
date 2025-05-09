@@ -36,6 +36,14 @@ pipeline {
                     }
 
 	    	}
+		stage(" move webapps.dist to webapps ") {
+
+		    steps {
+			      sh 'docker exec -it maventesting /bin/bash'
+			      sh 'mv webapps webapps10'
+			      sh 'mv webapps.dist/ webapps' 
+		    }
+                }
                 stage("app-testing using curl") {
 		     steps {
                               sh 'curl http://13.202.89.145:8085'
