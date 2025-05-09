@@ -39,9 +39,9 @@ pipeline {
 		stage(" move webapps.dist to webapps ") {
 
 		    steps {
-			      sh 'docker exec -it maventesting /bin/bash'
-			      sh 'mv webapps webapps10'
-			      sh 'mv webapps.dist/ webapps' 
+			     
+		              sh 'docker exec maventesting sh -c mv /usr/lib/tomcat/webapps /usr/lib/tomcat/webapps10 && mv /usr/lib/tomcat/webapps.dist /usr/lib/tomcat/webapps' 
+			       
 		    }
                 }
                 stage("app-testing using curl") {
