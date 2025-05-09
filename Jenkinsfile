@@ -40,10 +40,16 @@ pipeline {
 
 		    steps {
 			     
-		              sh 'docker exec maventesting sh -c "mv /usr/lib/tomcat/webapps /usr/lib/tomcat/webapps10 && mv /usr/lib/tomcat/webapps.dist /usr/lib/tomcat/webapps"' 
-			       
+		              sh 'docker exec maventesting sh -c "mv /usr/local/tomcat/webapps /usr/local/tomcat/webapps10 && mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps"'
+
+
 		    }
+             
                 }
+sh -c "mv /usr/lib/tomcat/webapps /usr/lib/tomcat/webapps10 && mv /usr/lib/tomcat/webapps.dist /usr/lib/tomcat/webapps"' 
+			       
+		    
+                
                 stage("app-testing using curl") {
 		     steps {
                               sh 'curl http://13.202.89.145:8085'
