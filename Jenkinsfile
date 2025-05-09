@@ -40,7 +40,7 @@ pipeline {
 
 		    steps {
 			     
-		              sh 'docker exec maventesting sh -c mv /usr/lib/tomcat/webapps /usr/lib/tomcat/webapps10 && mv /usr/lib/tomcat/webapps.dist /usr/lib/tomcat/webapps' 
+		              sh 'docker exec maventesting sh -c "mv /usr/lib/tomcat/webapps /usr/lib/tomcat/webapps10 && mv /usr/lib/tomcat/webapps.dist /usr/lib/tomcat/webapps"' 
 			       
 		    }
                 }
