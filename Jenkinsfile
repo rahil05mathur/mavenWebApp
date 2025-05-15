@@ -40,7 +40,7 @@ pipeline {
 
 		    steps {
 			     
-		              sh 'docker exec maventesting sh -c "mv /usr/local/tomcat/webapps /usr/local/tomcat/webapps10 && mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps"'
+		              sh 'docker exec maventesting1 sh -c "mv /usr/local/tomcat/webapps /usr/local/tomcat/webapps10 && mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps"'
 
 
 		    }
@@ -54,7 +54,7 @@ pipeline {
 
 	        }
 
-		stage("appal for production") {
+		stage("approval for production") {
 		    steps {
 			 script {
                                 Boolean userInput = input(id: 'Proceed1', message: 'Proceed and Abort?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: 'jenkins']])
