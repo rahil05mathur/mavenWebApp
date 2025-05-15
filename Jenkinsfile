@@ -32,7 +32,7 @@ pipeline {
 		stage("QAT TESTING") {
 		     steps {  
 
- 			      sh 'docker run -dt --name maventesting -p 0.0.0.0:8085:8080 mathur2000/rahil-mathur05:$BUILD_TAG'
+ 			      sh 'docker run -dt --name maventesting1 -p 0.0.0.0:8086:8080 mathur2000/rahil-mathur05:$BUILD_TAG'
                     }
 
 	    	}
@@ -48,7 +48,7 @@ pipeline {
                 }                
                 stage("app-testing using curl") {
 		     steps {
-                              sh 'curl http://localhost:8085'
+                              sh 'curl -L http://localhost:8086'
                      
                      } 
 
