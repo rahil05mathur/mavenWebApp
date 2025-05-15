@@ -57,8 +57,7 @@ pipeline {
 		stage("appal for production") {
 		    steps {
 			 script {
-                             Boolean userInput = input(id: 'Proceed1', message: 'Do you want Promote build?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm your agree with this']])
-
+                                Boolean userInput = input(id: 'Proceed1', message: 'Proceed and Abort?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: 'jenkins']])
                          }
 
  			 echo 'userInput: ' + userInput		 
