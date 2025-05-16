@@ -48,7 +48,7 @@ pipeline {
                 }                
                 stage("app-testing using curl") {
 		     steps {
-                              sh 'curl -k http://127.0.0.1:8086'
+                              sh 'curl http://localhost:8086'
                      
                      } 
 
