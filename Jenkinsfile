@@ -48,6 +48,7 @@ pipeline {
                 }                
                 stage("app-testing using curl") {
 		     steps {
+			      sh 'sleep 20'
                               sh 'curl http://localhost:8086'
                      
                      } 
