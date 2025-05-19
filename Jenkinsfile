@@ -59,9 +59,11 @@ pipeline {
 		    steps {
 			 script {
                                 Boolean userInput = input(id: 'Proceed1', message: 'Proceed and Abort?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: 'jenkins']])
-                         }
+                         
 
- 			 echo 'userInput: ' + userInput		 
+ 			 echo 'userInput: ' + userInput
+
+	 	         }		 
 		    }   
 		}
 
