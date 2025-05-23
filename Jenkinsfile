@@ -50,7 +50,7 @@ pipeline {
 		     steps {
 			      sh 'docker container rm -f $(docker container ls -aq)'
                               sh 'docker image ls rm -f $(docker image ls -aq)'
-                              sh 'curl -L http://localhost:8086'
+                              sh 'curl http://localhost:8086'
                      
                      } 
 
