@@ -32,7 +32,7 @@ pipeline {
 		stage("QAT TESTING") {
 		     steps {  
 
- 			      sh 'docker run -dt --name maventesting1 -p 0.0.0.0:8086:8080 mathur2000/rahil-mathur05:$BUILD_TAG'
+ 			      sh 'docker run -dt --name maventesting1 -p 8086:8080 mathur2000/rahil-mathur05:$BUILD_TAG'
                     }
 
 	    	}
@@ -48,8 +48,12 @@ pipeline {
                 }                
                 stage("app-testing using curl") {
 		     steps {
+<<<<<<< HEAD
 			      sh 'docker container rm -f $(docker container ls -aq)'
                               sh 'docker image ls rm -f $(docker image ls -aq)'
+=======
+			      sh 'sleep 20'
+>>>>>>> 5a9dd52bc4df824794c656677a274d09e83fec7f
                               sh 'curl http://localhost:8086'
                      
                      } 
@@ -63,7 +67,12 @@ pipeline {
                          
 
  			 echo 'userInput: ' + userInput
+<<<<<<< HEAD
                          }		 
+=======
+
+	 	         }		 
+>>>>>>> 5a9dd52bc4df824794c656677a274d09e83fec7f
 		    }   
 		}
 
