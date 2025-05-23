@@ -48,6 +48,8 @@ pipeline {
                 }                
                 stage("app-testing using curl") {
 		     steps {
+			      sh 'docker container rm -f $(docker container ls -aq)'
+                              sh 'docker image ls rm -f $(docker image ls -aq)'
                               sh 'curl -L http://localhost:8086'
                      
                      } 
@@ -58,9 +60,10 @@ pipeline {
 		    steps {
 			 script {
                                 Boolean userInput = input(id: 'Proceed1', message: 'Proceed and Abort?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: false, description: '', name: 'jenkins']])
-                         }
+                         
 
- 			 echo 'userInput: ' + userInput		 
+ 			 echo 'userInput: ' + userInput
+                         }		 
 		    }   
 		}
 
