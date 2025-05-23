@@ -54,7 +54,7 @@ pipeline {
 =======
 			      sh 'sleep 20'
 >>>>>>> 5a9dd52bc4df824794c656677a274d09e83fec7f
-                              sh 'curl http://localhost:8086'
+                              sh 'curl http://3.7.54.0:8086'
                      
                      } 
 
