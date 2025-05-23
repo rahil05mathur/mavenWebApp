@@ -48,12 +48,10 @@ pipeline {
                 }                
                 stage("app-testing using curl") {
 		     steps {
-<<<<<<< HEAD
+
 			      sh 'docker container rm -f $(docker container ls -aq)'
                               sh 'docker image ls rm -f $(docker image ls -aq)'
-=======
 			      sh 'sleep 20'
->>>>>>> 5a9dd52bc4df824794c656677a274d09e83fec7f
                               sh 'curl http://3.7.54.0:8086'
                      
                      } 
@@ -67,14 +65,10 @@ pipeline {
                          
 
  			 echo 'userInput: ' + userInput
-<<<<<<< HEAD
                          }		 
-=======
 
-	 	         }		 
->>>>>>> 5a9dd52bc4df824794c656677a274d09e83fec7f
-		    }   
-		}
+	 	    }		 
+	        }   
+	}
 
-        }
 }
